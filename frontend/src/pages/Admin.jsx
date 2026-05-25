@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { criarCurso, editarCurso, apagarCurso } from "../services/api";
+import { criarCurso, editarCurso, apagarCurso } from "../services/api.js";
 
 function Admin({ cursos, carregarCursos }) {
   const [editando, setEditando] = useState(null);

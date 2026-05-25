@@ -2,13 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 
-import Home from "./pages/Home";
-import Admin from "./pages/Admin";
-import CursoDetalhe from "./pages/CursoDetalhe";
+import './App.css';
 
-import { listarCursos } from "./services/api";
+import Home from "./pages/Home.jsx";
+import Admin from "./pages/Admin.jsx";
+import CursoDetalhe from "./pages/CursoDetalhe.jsx";
+
+import { listarCursos } from "./services/api.js";
 
 function App() {
   const [cursos, setCursos] = useState([]);

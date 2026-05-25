@@ -14,7 +14,7 @@ function CursoDetalhe({ cursos }) {
       <section className="hero-curso">
         <div className="hero-left">
           <span className="tag-ifms">CURSO INSTITUCIONAL IFMS</span>
-
+    
           <h1>{curso.titulo}</h1>
 
           <p>{curso.detalhes}</p>
@@ -37,6 +37,7 @@ function CursoDetalhe({ cursos }) {
           <img src={curso.imagem} alt={curso.titulo} className="hero-img" />
         </div>
       </section>
+
 
       {curso.video && (
         <section className="video-section">
