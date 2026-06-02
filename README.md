@@ -32,5 +32,3 @@ Trabalho prático desenvolvido em ambiente acadêmico para o projeto **InovaIF**
 *npm i
 *npm run dev
 
-
----
