@@ -26,3 +26,11 @@ Trabalho prático desenvolvido em ambiente acadêmico para o projeto **InovaIF**
 * **Mobile-First e Responsivo:** Grid de recursos e cards ajustáveis para telas menores e dispositivos móveis através de Media Queries limpas.
 
 ---
+
+## Como rodar o projeto
+
+*npm i
+*npm run dev
+
+
+---
