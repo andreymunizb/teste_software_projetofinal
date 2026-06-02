@@ -1,50 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import { useEffect, useState } from "react";
-
-import Navbar from "./components/Navbar.jsx";
-
-import './App.css';
-
-import Home from "./pages/Home.jsx";
-import Admin from "./pages/Admin.jsx";
-import CursoDetalhe from "./pages/CursoDetalhe.jsx";
-
-import { listarCursos } from "./services/api.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CursoDetalhe from "./pages/CursoDetalhe";
+import "./landing.css";
 
 function App() {
-  const [cursos, setCursos] = useState([]);
-
-  async function carregarCursos() {
-    const dados = await listarCursos();
-    setCursos(dados);
-  }
-
-  useEffect(() => {
-    carregarCursos();
-  }, []);
-
   return (
-    <BrowserRouter>
-      <Navbar />
-
+    <Router>
       <Routes>
-        <Route path="/" element={<Home cursos={cursos} />} />
-
-        <Route
-          path="/admin"
-          element={
-            <Admin
-              cursos={cursos}
-              setCursos={setCursos}
-              carregarCursos={carregarCursos}
-            />
-          }
-        />
-
-        <Route path="/curso/:id" element={<CursoDetalhe cursos={cursos} />} />
+        <Route path="/" element={<CursoDetalhe />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
